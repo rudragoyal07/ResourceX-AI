@@ -14,7 +14,7 @@
   --color-slate-700: #cbd5e1;
   --color-slate-800: #e2e8f0; /* Light gray borders */
   --color-slate-900: #ffffff; /* White card backgrounds */
-  --color-slate-950: #f8fafc; /* Light slate page backgrounds */
+  --color-slate-950: #f5f3ff; /* Premium light purple page backgrounds */
   
   --color-gray-100: #1e293b;
   --color-gray-200: #334155;
@@ -25,7 +25,7 @@
   --color-gray-700: #cbd5e1;
   --color-gray-800: #e2e8f0;
   --color-gray-900: #ffffff;
-  --color-gray-950: #f8fafc;
+  --color-gray-950: #f5f3ff;
   
   /* Primary Royal Blue accents matching the logo */
   --color-primary: #2563eb;

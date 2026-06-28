@@ -158,11 +158,11 @@ export default function LandingPage() {
           </div>
 
           {/* Center Nav Links */}
-          <nav className="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-500">
-            <span className="cursor-pointer hover:text-blue-600 transition">Emergency Inventory</span>
-            <span className="cursor-pointer hover:text-blue-600 transition">Matchmaking Portal</span>
-            <span className="cursor-pointer hover:text-blue-600 transition">AI Forecasts</span>
-            <span className="cursor-pointer hover:text-blue-600 transition">Active Nodes</span>
+          <nav className="hidden md:flex items-center gap-8 text-xs font-semibold text-slate-200">
+            <span className="cursor-pointer hover:text-blue-400 transition">Emergency Inventory</span>
+            <span className="cursor-pointer hover:text-blue-400 transition">Matchmaking Portal</span>
+            <span className="cursor-pointer hover:text-blue-400 transition">AI Forecasts</span>
+            <span className="cursor-pointer hover:text-blue-400 transition">Active Nodes</span>
           </nav>
 
           {/* Right Action */}
