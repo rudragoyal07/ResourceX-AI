@@ -176,6 +176,73 @@ export default function LandingPage() {
           {/* Bottom-to-Top rising gradient fade - sky blue tint */}
           <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-sky-200/40 via-sky-100/10 to-transparent pointer-events-none z-0" />
           
+          {/* SVG Connective World Map & Cargo lines in background */}
+          <div className="absolute inset-0 w-full h-full z-0 opacity-[0.22] pointer-events-none select-none flex items-center justify-center">
+            <svg className="w-full h-full max-w-[700px] scale-110 md:scale-125" viewBox="0 0 600 400" fill="none">
+              {/* World Grid Silhouette outline */}
+              <path d="M50 150 C 100 120, 200 80, 300 100 C 400 120, 500 80, 550 120 C 580 150, 500 250, 450 280 C 400 310, 200 350, 150 320 C 100 290, 20 200, 50 150 Z" 
+                fill="rgba(59, 130, 246, 0.01)" stroke="rgba(59, 130, 246, 0.08)" strokeWidth="1" strokeDasharray="5,5" />
+              
+              {/* Grid latitude lines */}
+              <ellipse cx="300" cy="200" rx="250" ry="120" stroke="rgba(59, 130, 246, 0.04)" strokeWidth="1" />
+              <ellipse cx="300" cy="200" rx="180" ry="80" stroke="rgba(59, 130, 246, 0.04)" strokeWidth="1" />
+              <line x1="300" y1="50" x2="300" y2="350" stroke="rgba(59, 130, 246, 0.04)" strokeWidth="1" />
+              <line x1="100" y1="200" x2="500" y2="200" stroke="rgba(59, 130, 246, 0.04)" strokeWidth="1" />
+
+              {/* Simulated Resource Flowing Curves */}
+              {/* Flight Path 1: Gurugram to Delhi */}
+              <path d="M120 180 Q 220 100 320 140" fill="none" stroke="rgba(59, 130, 246, 0.35)" strokeWidth="2" strokeDasharray="6,4">
+                <animate attributeName="stroke-dashoffset" values="50;0" dur="4s" repeatCount="indefinite" />
+              </path>
+              {/* Flight Path 2: Delhi to Noida */}
+              <path d="M320 140 Q 420 180 480 250" fill="none" stroke="rgba(16, 185, 129, 0.35)" strokeWidth="2" strokeDasharray="6,4">
+                <animate attributeName="stroke-dashoffset" values="0;50" dur="3s" repeatCount="indefinite" />
+              </path>
+              {/* Flight Path 3: Ghaziabad to Gurugram */}
+              <path d="M480 120 Q 300 280 120 180" fill="none" stroke="rgba(245, 158, 11, 0.3)" strokeWidth="1.5" strokeDasharray="4,4">
+                <animate attributeName="stroke-dashoffset" values="30;0" dur="6s" repeatCount="indefinite" />
+              </path>
+
+              {/* Glowing Network Nodes (Warehouses & Hospitals) */}
+              {/* Node 1: West Hub */}
+              <g>
+                <circle cx="120" cy="180" r="12" fill="rgba(59, 130, 246, 0.15)" />
+                <circle cx="120" cy="180" r="6" fill="#3b82f6" className="animate-pulse" />
+                <text x="120" y="205" fill="#475569" fontSize="10" fontWeight="bold" textAnchor="middle">Gurugram Depot</text>
+              </g>
+
+              {/* Node 2: Center Hub */}
+              <g>
+                <circle cx="320" cy="140" r="16" fill="rgba(239, 68, 68, 0.15)" />
+                <circle cx="320" cy="140" r="8" fill="#ef4444" className="animate-ping" style={{ animationDuration: '2s' }} />
+                <circle cx="320" cy="140" r="6" fill="#ef4444" />
+                <text x="320" y="120" fill="#0f172a" fontSize="10" fontWeight="black" textAnchor="middle">Delhi City Center</text>
+              </g>
+
+              {/* Node 3: East Hub */}
+              <g>
+                <circle cx="480" cy="250" r="12" fill="rgba(16, 185, 129, 0.15)" />
+                <circle cx="480" cy="250" r="6" fill="#10b981" />
+                <text x="480" y="275" fill="#475569" fontSize="10" fontWeight="bold" textAnchor="middle">Noida Clinic</text>
+              </g>
+
+              {/* Node 4: North Hub */}
+              <g>
+                <circle cx="480" cy="120" r="10" fill="rgba(245, 158, 11, 0.15)" />
+                <circle cx="480" cy="120" r="5" fill="#f59e0b" />
+                <text x="480" y="105" fill="#475569" fontSize="10" fontWeight="bold" textAnchor="middle">Ghaziabad NGO</text>
+              </g>
+
+              {/* Animated Transit Vehicle Cargo Overlay */}
+              <circle cx="0" cy="0" r="4" fill="#10b981">
+                <animateMotion dur="4s" repeatCount="indefinite" path="M120 180 Q 220 100 320 140" />
+              </circle>
+              <circle cx="0" cy="0" r="4" fill="#3b82f6">
+                <animateMotion dur="3s" repeatCount="indefinite" path="M320 140 Q 420 180 480 250" />
+              </circle>
+            </svg>
+          </div>
+
           {/* Content Wrapper */}
           <div className="relative z-10 max-w-xl mx-auto flex flex-col items-center space-y-6 md:space-y-8">
             {/* Small Center Logo */}
