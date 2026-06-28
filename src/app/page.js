@@ -147,161 +147,100 @@ export default function LandingPage() {
       </div>
 
       {/* Top Navbar */}
-      <div className="relative z-10 w-full px-2 md:px-4 mt-6">
-        <header className="w-full px-4 py-4 flex items-center justify-between rounded-2xl bg-blue-50/85 border border-blue-100/50 shadow-xl shadow-blue-500/5 backdrop-blur-xl">
-          <div className="flex items-center gap-3">
-            <img src="/logo.png" className="w-8 h-8 object-contain shrink-0" alt="ResourceX Logo" />
-            <div>
-              <h1 className="text-lg font-black tracking-tight">
-                <span className="text-blue-950">ResourceX</span>{" "}
-                <span className="text-blue-600">AI</span>
-              </h1>
-              <p className="text-[9px] text-gray-500 tracking-widest uppercase font-semibold">Emergency Exchange</p>
-            </div>
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 mt-6">
+        <header className="w-full px-6 py-4 flex items-center justify-between rounded-full bg-white/80 border border-slate-200/50 shadow-sm backdrop-blur-xl">
+          {/* Logo */}
+          <div className="flex items-center gap-2.5">
+            <img src="/logo.png" className="w-6 h-6 object-contain shrink-0" alt="ResourceX Logo" />
+            <h1 className="text-sm font-black tracking-tight text-slate-900">
+              ResourceX <span className="text-blue-600">AI</span>
+            </h1>
           </div>
 
+          {/* Center Nav Links */}
+          <nav className="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-500">
+            <span className="cursor-pointer hover:text-blue-600 transition">Emergency Inventory</span>
+            <span className="cursor-pointer hover:text-blue-600 transition">Matchmaking Portal</span>
+            <span className="cursor-pointer hover:text-blue-600 transition">AI Forecasts</span>
+            <span className="cursor-pointer hover:text-blue-600 transition">Active Nodes</span>
+          </nav>
 
-
+          {/* Right Action */}
           <div className="flex items-center gap-4">
-            <button onClick={() => { setOnboardingStep(1); setShowLoginModal(true); }} className="px-4 py-2 text-xs font-bold rounded-lg bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/20 hover:border-blue-500/45 text-blue-400 hover:text-blue-300 transition flex items-center gap-2 active:scale-95 shadow-md shadow-blue-500/5 cursor-pointer">
-              Login / Signup
-              <ArrowRight className="w-4 h-4" />
+            <button 
+              onClick={() => { setOnboardingStep(1); setShowLoginModal(true); }} 
+              className="px-5 py-2 text-xs font-bold rounded-full bg-slate-950 hover:bg-slate-900 text-white transition active:scale-95 shadow-md shadow-slate-950/10 cursor-pointer"
+            >
+              Launch Console
             </button>
           </div>
         </header>
       </div>
 
-      {/* Hero Section */}
-      <main className="relative z-10 flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-6 py-12 md:py-20 lg:grid lg:grid-cols-12 lg:gap-12 items-center">
-        
-        {/* Hero Left Content */}
-        <div className="col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 md:space-y-8">
+      {/* Centered Card Hero Section */}
+      <main className="relative z-10 flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 py-8 md:py-12">
+        <div className="w-full rounded-[32px] bg-white border border-slate-200/50 shadow-2xl relative overflow-hidden flex flex-col items-center justify-center text-center px-6 py-24 md:py-32 min-h-[580px]">
           
+          {/* Bottom-to-Top rising gradient fade */}
+          <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-blue-500/10 via-blue-500/0 to-transparent pointer-events-none z-0" />
+          
+          {/* Content Wrapper */}
+          <div className="relative z-10 max-w-xl mx-auto flex flex-col items-center space-y-6 md:space-y-8">
+            {/* Small Center Logo */}
+            <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center shadow-inner mb-2 animate-float">
+              <img src="/logo.png" className="w-6 h-6 object-contain" alt="ResourceX Icon" />
+            </div>
 
+            {/* Title */}
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15] text-slate-950">
+              Where Resources <br />
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                Flow & Grow
+              </span>
+            </h2>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white">
-            Intelligent Resource <br />
-            <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-orange-400 bg-clip-text text-transparent">
-              Exchange
-            </span> for an <br />
-            Uncertain World
-          </h2>
+            {/* Description */}
+            <p className="text-sm md:text-base text-gray-500 max-w-md leading-relaxed">
+              AI predicts shortages, matches organizations with surplus resources, and optimizes emergency resource allocation before crises become disasters.
+            </p>
 
-          <p className="text-base md:text-lg text-gray-400 max-w-xl">
-            AI predicts shortages, matches organizations with surplus resources, and optimizes emergency resource allocation before crises become disasters.
-          </p>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <button 
-              onClick={() => { setOnboardingStep(1); setShowLoginModal(true); }} 
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg font-bold shadow-xl shadow-blue-500/25 flex items-center justify-center gap-3 transition-all transform active:scale-95 text-base border border-blue-400/20 cursor-pointer"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            {/* Primary Action Button */}
+            <div className="pt-2">
+              <button 
+                onClick={() => { setOnboardingStep(1); setShowLoginModal(true); }} 
+                className="px-8 py-3.5 bg-slate-950 hover:bg-slate-900 text-white rounded-full font-bold shadow-lg shadow-slate-950/15 flex items-center justify-center gap-2.5 transition active:scale-95 text-sm cursor-pointer"
+              >
+                Launch Console
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
 
-          {/* Scrolling Statistics Section */}
-          <div className="w-full pt-10 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-6">
+          {/* Micro Statistics at Card Bottom */}
+          <div className="absolute bottom-8 left-0 right-0 z-10 hidden sm:flex justify-center items-center gap-8 md:gap-12 px-6 text-center">
             <div className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-extrabold text-white">
+              <span className="text-base md:text-lg font-extrabold text-slate-950">
                 <CountUp to={organizations.length} />
               </span>
-              <span className="text-xs text-gray-500 uppercase tracking-wider mt-1">Active Relief Nodes</span>
+              <span className="text-[9px] text-gray-400 uppercase tracking-widest font-bold">Active Nodes</span>
             </div>
+            <div className="w-px h-6 bg-slate-200" />
             <div className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-extrabold text-blue-400">
+              <span className="text-base md:text-lg font-extrabold text-slate-950">
                 <CountUp to={avgTransitTime} suffix=" min" />
               </span>
-              <span className="text-xs text-gray-500 uppercase tracking-wider mt-1">Avg. Drone Transit</span>
+              <span className="text-[9px] text-gray-400 uppercase tracking-widest font-bold">Avg Transit</span>
             </div>
+            <div className="w-px h-6 bg-slate-200" />
             <div className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-extrabold text-emerald-400">
+              <span className="text-base md:text-lg font-extrabold text-slate-950">
                 <CountUp to={matchAccuracy} suffix="%" />
               </span>
-              <span className="text-xs text-gray-500 uppercase tracking-wider mt-1">AI Match Accuracy</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl md:text-3xl font-extrabold text-orange-400">
-                <CountUp to={0} suffix=".0%" />
-              </span>
-              <span className="text-xs text-gray-500 uppercase tracking-wider mt-1">Expiry Resource Waste</span>
+              <span className="text-[9px] text-gray-400 uppercase tracking-widest font-bold">AI Accuracy</span>
             </div>
           </div>
+
         </div>
-
-        {/* Hero Right Visual: SVG Connective World Map & Cargo lines */}
-        <div className="col-span-6 w-full h-[320px] md:h-[480px] relative mt-12 lg:mt-0 flex items-center justify-center select-none">
-          <div className="absolute w-[95%] h-[95%] rounded-full bg-blue-500/5 blur-[80px]" />
-          
-          <svg className="w-full h-full max-w-[500px]" viewBox="0 0 600 400" fill="none">
-            {/* World Grid Silhouette outline */}
-            <path d="M50 150 C 100 120, 200 80, 300 100 C 400 120, 500 80, 550 120 C 580 150, 500 250, 450 280 C 400 310, 200 350, 150 320 C 100 290, 20 200, 50 150 Z" 
-              fill="rgba(59, 130, 246, 0.02)" stroke="rgba(59, 130, 246, 0.08)" strokeWidth="1" strokeDasharray="5,5" />
-            
-            {/* Grid latitude lines */}
-            <ellipse cx="300" cy="200" rx="250" ry="120" stroke="rgba(255, 255, 255, 0.03)" strokeWidth="1" />
-            <ellipse cx="300" cy="200" rx="180" ry="80" stroke="rgba(255, 255, 255, 0.03)" strokeWidth="1" />
-            <line x1="300" y1="50" x2="300" y2="350" stroke="rgba(255, 255, 255, 0.03)" strokeWidth="1" />
-            <line x1="100" y1="200" x2="500" y2="200" stroke="rgba(255, 255, 255, 0.03)" strokeWidth="1" />
-
-            {/* Simulated Resource Flowing Curves */}
-            {/* Flight Path 1: Gurugram to Delhi */}
-            <path d="M120 180 Q 220 100 320 140" fill="none" stroke="rgba(59, 130, 246, 0.35)" strokeWidth="2" strokeDasharray="6,4">
-              <animate attributeName="stroke-dashoffset" values="50;0" dur="4s" repeatCount="indefinite" />
-            </path>
-            {/* Flight Path 2: Delhi to Noida */}
-            <path d="M320 140 Q 420 180 480 250" fill="none" stroke="rgba(16, 185, 129, 0.35)" strokeWidth="2" strokeDasharray="6,4">
-              <animate attributeName="stroke-dashoffset" values="0;50" dur="3s" repeatCount="indefinite" />
-            </path>
-            {/* Flight Path 3: Ghaziabad to Gurugram */}
-            <path d="M480 120 Q 300 280 120 180" fill="none" stroke="rgba(245, 158, 11, 0.3)" strokeWidth="1.5" strokeDasharray="4,4">
-              <animate attributeName="stroke-dashoffset" values="30;0" dur="6s" repeatCount="indefinite" />
-            </path>
-
-            {/* Glowing Network Nodes (Warehouses & Hospitals) */}
-            {/* Node 1: West Hub */}
-            <g>
-              <circle cx="120" cy="180" r="12" fill="rgba(59, 130, 246, 0.15)" />
-              <circle cx="120" cy="180" r="6" fill="#3b82f6" className="animate-pulse" />
-              <text x="120" y="205" fill="#9ca3af" fontSize="10" textAnchor="middle">Gurugram Depot</text>
-            </g>
-
-            {/* Node 2: Center Hub */}
-            <g>
-              <circle cx="320" cy="140" r="16" fill="rgba(239, 68, 68, 0.15)" />
-              <circle cx="320" cy="140" r="8" fill="#ef4444" className="animate-ping" style={{ animationDuration: '2s' }} />
-              <circle cx="320" cy="140" r="6" fill="#ef4444" />
-              <text x="320" y="120" fill="white" fontSize="10" fontWeight="bold" textAnchor="middle">Delhi City Center</text>
-            </g>
-
-            {/* Node 3: East Hub */}
-            <g>
-              <circle cx="480" cy="250" r="12" fill="rgba(16, 185, 129, 0.15)" />
-              <circle cx="480" cy="250" r="6" fill="#10b981" />
-              <text x="480" y="275" fill="#9ca3af" fontSize="10" textAnchor="middle">Noida Clinic</text>
-            </g>
-
-            {/* Node 4: North Hub */}
-            <g>
-              <circle cx="480" cy="120" r="10" fill="rgba(245, 158, 11, 0.15)" />
-              <circle cx="480" cy="120" r="5" fill="#f59e0b" />
-              <text x="480" y="105" fill="#9ca3af" fontSize="10" textAnchor="middle">Ghaziabad NGO</text>
-            </g>
-
-            {/* Animated Transit Vehicle Cargo Overlay */}
-            <circle cx="0" cy="0" r="4" fill="#10b981">
-              <animateMotion dur="4s" repeatCount="indefinite" path="M120 180 Q 220 100 320 140" />
-            </circle>
-            <circle cx="0" cy="0" r="4" fill="#3b82f6">
-              <animateMotion dur="3s" repeatCount="indefinite" path="M320 140 Q 420 180 480 250" />
-            </circle>
-          </svg>
-          
-          {/* Glass Card Floating Widgets removed */}
-        </div>
-
       </main>
 
       {/* Footer */}
