@@ -179,8 +179,8 @@ export default function LandingPage() {
           {/* Content Wrapper */}
           <div className="relative z-10 max-w-xl mx-auto flex flex-col items-center space-y-6 md:space-y-8">
             {/* Small Center Logo */}
-            <div className="w-12 h-12 rounded-full bg-blue-50/50 flex items-center justify-center shadow-inner mb-2 animate-float">
-              <img src="/logo.png" className="w-6 h-6 object-contain" alt="ResourceX Icon" />
+            <div className="w-16 h-16 rounded-full bg-blue-50/50 flex items-center justify-center shadow-inner mb-2 animate-float">
+              <img src="/logo.png" className="w-10 h-10 object-contain" alt="ResourceX Icon" />
             </div>
 
             {/* Title */}
