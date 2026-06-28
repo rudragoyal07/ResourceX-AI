@@ -259,7 +259,7 @@ export default function LandingPage() {
             </h2>
 
             {/* Description */}
-            <p className="text-sm md:text-base text-slate-300 max-w-md leading-relaxed">
+            <p className="text-base md:text-lg text-slate-400 max-w-lg leading-relaxed font-serif italic">
               AI predicts shortages, matches organizations with surplus resources, and optimizes emergency resource allocation before crises become disasters.
             </p>
 
