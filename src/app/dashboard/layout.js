@@ -141,11 +141,11 @@ export default function DashboardLayout({ children }) {
           </div>
 
           {/* AI Live Ticker */}
-          <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded bg-blue-950/20 border border-blue-900/30 max-w-[420px] overflow-hidden">
-            <span className="text-[9px] font-bold text-red-400 uppercase tracking-widest flex items-center gap-1 animate-pulse shrink-0">
+          <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded bg-blue-100/50 border border-blue-200/60 max-w-[420px] overflow-hidden">
+            <span className="text-[9px] font-bold text-red-600 uppercase tracking-widest flex items-center gap-1 animate-pulse shrink-0">
               <AlertTriangle className="w-3 h-3" /> Live
             </span>
-            <span className="text-[10px] text-blue-300 truncate tracking-wide animate-fade-in font-medium">
+            <span className="text-[10px] text-blue-950 truncate tracking-wide animate-fade-in font-semibold">
               {tickerAlerts[tickerIndex % tickerAlerts.length] || tickerAlerts[0]}
             </span>
           </div>
