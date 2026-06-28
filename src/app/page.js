@@ -456,16 +456,16 @@ export default function LandingPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xl"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-md"
           >
             <motion.div 
               initial={{ scale: 0.95, y: 15 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 15 }}
-              className={`relative w-full transition-all duration-300 rounded-3xl border border-white/10 shadow-2xl p-6 bg-white/5 backdrop-blur-2xl flex flex-col justify-between max-h-[92vh] overflow-y-auto ${
+              className={`relative w-full transition-all duration-300 rounded-3xl border border-slate-200 shadow-2xl p-6 bg-slate-900 flex flex-col justify-between max-h-[92vh] overflow-y-auto ${
                 onboardingStep === 2 ? 'max-w-lg' : 'max-w-sm'
               }`}
-              style={{ boxShadow: '0 25px 50px -12px rgba(9, 15, 30, 0.9)' }}
+              style={{ boxShadow: '0 20px 40px -10px rgba(15, 23, 42, 0.15)' }}
             >
               {/* Close Circular Button */}
               <button 
@@ -474,21 +474,21 @@ export default function LandingPage() {
                   setOnboardingStep(1);
                   setIsRegisterTab(false);
                 }}
-                className="absolute top-4 right-4 w-7 h-7 rounded-full bg-[#0d1627]/80 hover:bg-[#1a2948] border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition cursor-pointer active:scale-90 z-10"
+                className="absolute top-4 right-4 w-7 h-7 rounded-full bg-slate-200 hover:bg-slate-300 border border-slate-200/50 flex items-center justify-center text-slate-300 hover:text-slate-100 transition cursor-pointer active:scale-90 z-10"
               >
                 <X className="w-4 h-4" />
               </button>
 
               {/* Wizard Title */}
               <div className="mb-4">
-                <h3 className="text-lg font-bold text-center text-white tracking-wider font-sans">
+                <h3 className="text-lg font-extrabold text-center text-slate-100 tracking-wider font-sans">
                   {onboardingStep === 1 && "Authentication Gateway"}
                   {onboardingStep === 2 && "Profile & Map Location"}
                   {onboardingStep === 3 && "Inventory Seeding"}
                 </h3>
                 {/* Progress bar */}
-                <div className="w-full bg-slate-950/60 rounded-full h-1 mt-2.5 overflow-hidden flex">
-                  <div className={`h-full bg-blue-500 transition-all duration-300 ${
+                <div className="w-full bg-slate-200 rounded-full h-1 mt-2.5 overflow-hidden flex">
+                  <div className={`h-full bg-blue-600 transition-all duration-300 ${
                     onboardingStep === 1 ? 'w-1/3' : onboardingStep === 2 ? 'w-2/3' : 'w-full'
                   }`}></div>
                 </div>
@@ -512,46 +512,46 @@ export default function LandingPage() {
                   }}
                   className="space-y-4 text-left pt-2"
                 >
-                  <p className="text-[10px] text-gray-400 leading-relaxed text-center mb-4">
+                  <p className="text-[10px] text-slate-300 leading-relaxed text-center mb-4">
                     Access the decentralized crisis logistics network. Enter your email and choose your access portal.
                   </p>
 
                   {/* Email */}
-                  <div className="relative border-b border-slate-700 py-2">
+                  <div className="relative border-b border-slate-200 py-2">
                     <input
                       type="email"
                       required
                       value={emailText}
                       onChange={(e) => setEmailText(e.target.value)}
                       placeholder="Email Address"
-                      className="w-full bg-transparent text-xs text-white placeholder-gray-500 focus:outline-none pr-8 py-0.5"
+                      className="w-full bg-transparent text-xs text-slate-100 placeholder-slate-300 focus:outline-none pr-8 py-0.5"
                     />
-                    <Mail className="absolute right-2 top-2.5 w-4 h-4 text-gray-500" />
+                    <Mail className="absolute right-2 top-2.5 w-4 h-4 text-slate-300" />
                   </div>
 
                   {/* Password */}
-                  <div className="relative border-b border-slate-700 py-2">
+                  <div className="relative border-b border-slate-200 py-2">
                     <input
                       type="password"
                       required
                       value={passwordText}
                       onChange={(e) => setPasswordText(e.target.value)}
                       placeholder="Security Password"
-                      className="w-full bg-transparent text-xs text-white placeholder-gray-500 focus:outline-none pr-8 py-0.5"
+                      className="w-full bg-transparent text-xs text-slate-100 placeholder-slate-300 focus:outline-none pr-8 py-0.5"
                     />
-                    <Lock className="absolute right-2 top-2.5 w-4 h-4 text-gray-500" />
+                    <Lock className="absolute right-2 top-2.5 w-4 h-4 text-slate-300" />
                   </div>
 
                   {/* Role Type Selector */}
                   <div className="pt-2 space-y-2 select-none">
-                    <label className="text-[9px] text-gray-500 uppercase tracking-widest font-semibold block">Select Access Portal</label>
+                    <label className="text-[9px] text-slate-300 uppercase tracking-widest font-semibold block">Select Access Portal</label>
                     <div className="grid grid-cols-2 gap-3">
                       <div
                         onClick={() => setLoginRole("individual")}
                         className={`p-3 rounded-xl border text-center cursor-pointer transition flex flex-col items-center gap-1.5 ${
                           loginRole === "individual" 
-                            ? 'bg-blue-600/10 border-blue-500 text-white font-bold' 
-                            : 'bg-slate-950/20 border-slate-800 hover:bg-slate-900/40 text-gray-400'
+                            ? 'bg-blue-50 border-blue-500 text-blue-600 font-bold' 
+                            : 'bg-slate-200/50 border-slate-200 hover:bg-slate-200 text-slate-300'
                         }`}
                       >
                         <span className="text-base">👤</span>
@@ -562,8 +562,8 @@ export default function LandingPage() {
                         onClick={() => setLoginRole("organization")}
                         className={`p-3 rounded-xl border text-center cursor-pointer transition flex flex-col items-center gap-1.5 ${
                           loginRole === "organization" 
-                            ? 'bg-blue-600/10 border-blue-500 text-white font-bold' 
-                            : 'bg-slate-950/20 border-slate-800 hover:bg-slate-900/40 text-gray-400'
+                            ? 'bg-blue-50 border-blue-500 text-blue-600 font-bold' 
+                            : 'bg-slate-200/50 border-slate-200 hover:bg-slate-200 text-slate-300'
                         }`}
                       >
                         <span className="text-base">🏥</span>
@@ -575,14 +575,14 @@ export default function LandingPage() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full py-3.5 mt-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-lg transition active:scale-95 cursor-pointer text-center text-xs tracking-wider uppercase font-sans"
+                    className="w-full py-3.5 mt-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-slate-900 font-bold shadow-lg transition active:scale-95 cursor-pointer text-center text-xs tracking-wider uppercase font-sans"
                   >
                     {loginRole === "individual" ? "Access Dashboard" : "Configure Organization"}
                   </button>
 
                   {/* Quick-switch dropdown for seeded demo roles */}
-                  <div className="pt-3 border-t border-slate-900 flex flex-col gap-1 text-[10px]">
-                    <span className="text-[9px] text-gray-500 font-semibold uppercase tracking-wider text-center">Or Quick Login (Demo Profiles)</span>
+                  <div className="pt-3 border-t border-slate-200 flex flex-col gap-1 text-[10px]">
+                    <span className="text-[9px] text-slate-300 font-semibold uppercase tracking-wider text-center">Or Quick Login (Demo Profiles)</span>
                     <select
                       value={selectedOrgId}
                       onChange={(e) => {
@@ -591,11 +591,11 @@ export default function LandingPage() {
                         setShowLoginModal(false);
                         router.push("/dashboard");
                       }}
-                      className="bg-slate-950 text-[10px] border border-slate-800 rounded px-2 py-1.5 text-gray-300 focus:outline-none cursor-pointer"
+                      className="bg-slate-200/50 text-[10px] border border-slate-200 rounded px-2 py-1.5 text-slate-100 focus:outline-none cursor-pointer"
                     >
-                      <option value="">Select pre-seeded facility...</option>
+                      <option value="" className="bg-slate-900 text-slate-100">Select pre-seeded facility...</option>
                       {organizations.map((org) => (
-                        <option key={org.id} value={org.id}>
+                        <option key={org.id} value={org.id} className="bg-slate-900 text-slate-100">
                           {org.type === "Hospital" ? "🏥" : "🏢"} {org.name} ({org.location})
                         </option>
                       ))}
@@ -614,56 +614,56 @@ export default function LandingPage() {
                   }}
                   className="space-y-4 text-left pt-2"
                 >
-                  <p className="text-[10px] text-gray-400 leading-relaxed mb-2">
+                  <p className="text-[10px] text-slate-300 leading-relaxed mb-2">
                     Define your facility profile and map coordinates. Use the search bar or click the map canvas to set your location pin.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Name */}
-                    <div className="relative border-b border-slate-700 py-1 flex flex-col">
-                      <label className="text-[8px] text-gray-500 uppercase tracking-widest font-semibold">Organization Name</label>
+                    <div className="relative border-b border-slate-200 py-1 flex flex-col">
+                      <label className="text-[8px] text-slate-300 uppercase tracking-widest font-semibold">Organization Name</label>
                       <input
                         type="text"
                         required
                         value={regName}
                         onChange={(e) => setRegName(e.target.value)}
                         placeholder="e.g. Noida Trauma Center"
-                        className="bg-transparent text-xs text-white placeholder-gray-500 focus:outline-none py-1"
+                        className="bg-transparent text-xs text-slate-100 placeholder-slate-300 focus:outline-none py-1"
                       />
                     </div>
                     {/* Type */}
-                    <div className="relative border-b border-slate-700 py-1 flex flex-col">
-                      <label className="text-[8px] text-gray-500 uppercase tracking-widest font-semibold">Node Type</label>
+                    <div className="relative border-b border-slate-200 py-1 flex flex-col">
+                      <label className="text-[8px] text-slate-300 uppercase tracking-widest font-semibold">Node Type</label>
                       <select
                         value={regType}
                         onChange={(e) => setRegType(e.target.value)}
-                        className="bg-transparent text-xs text-white focus:outline-none py-1.5 cursor-pointer font-medium"
+                        className="bg-transparent text-xs text-slate-100 focus:outline-none py-1.5 cursor-pointer font-medium"
                       >
-                        <option value="Hospital" className="bg-[#0b1325] text-white">Hospital (Shortage Node)</option>
-                        <option value="Warehouse" className="bg-[#0b1325] text-white">Warehouse (Supply Depot)</option>
-                        <option value="NGO" className="bg-[#0b1325] text-white">NGO relief node</option>
-                        <option value="Company" className="bg-[#0b1325] text-white">Logistics center</option>
-                        <option value="Government" className="bg-[#0b1325] text-white">Government reserve</option>
+                        <option value="Hospital" className="bg-slate-900 text-slate-100">Hospital (Shortage Node)</option>
+                        <option value="Warehouse" className="bg-slate-900 text-slate-100">Warehouse (Supply Depot)</option>
+                        <option value="NGO" className="bg-slate-900 text-slate-100">NGO relief node</option>
+                        <option value="Company" className="bg-slate-900 text-slate-100">Logistics center</option>
+                        <option value="Government" className="bg-slate-900 text-slate-100">Government reserve</option>
                       </select>
                     </div>
                   </div>
 
                   {/* Location Area Text */}
-                  <div className="relative border-b border-slate-700 py-1 flex flex-col">
-                    <label className="text-[8px] text-gray-500 uppercase tracking-widest font-semibold">Area / City Name</label>
+                  <div className="relative border-b border-slate-200 py-1 flex flex-col">
+                    <label className="text-[8px] text-slate-300 uppercase tracking-widest font-semibold">Area / City Name</label>
                     <input
                       type="text"
                       required
                       value={regLocation}
                       onChange={(e) => setRegLocation(e.target.value)}
                       placeholder="e.g. Vasant Kunj, Delhi"
-                      className="bg-transparent text-xs text-white placeholder-gray-500 focus:outline-none py-1"
+                      className="bg-transparent text-xs text-slate-100 placeholder-slate-300 focus:outline-none py-1"
                     />
                   </div>
 
                   {/* Interactive Leaflet Picker Map */}
                   <div className="space-y-1">
-                    <label className="text-[8px] text-gray-500 uppercase tracking-widest font-semibold block">Locate Your Node Pin</label>
+                    <label className="text-[8px] text-slate-300 uppercase tracking-widest font-semibold block">Locate Your Node Pin</label>
                     <LocationPickerMap coords={regCoords} onChangeCoords={setRegCoords} />
                   </div>
 
@@ -675,13 +675,13 @@ export default function LandingPage() {
                         setOnboardingStep(1);
                         setIsRegisterTab(false);
                       }}
-                      className="w-1/3 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white font-bold transition text-xs tracking-wider"
+                      className="w-1/3 py-3 rounded-xl bg-slate-200 hover:bg-slate-300/85 border border-slate-200 text-slate-100 font-bold transition text-xs tracking-wider"
                     >
                       Back
                     </button>
                     <button
                       type="submit"
-                      className="w-2/3 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold transition text-xs tracking-wider flex items-center justify-center gap-1.5"
+                      className="w-2/3 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-slate-900 font-bold transition text-xs tracking-wider flex items-center justify-center gap-1.5"
                     >
                       Next: Seed Stock
                       <ArrowRight className="w-4 h-4" />
@@ -731,23 +731,23 @@ export default function LandingPage() {
                   }}
                   className="space-y-4 text-left pt-2"
                 >
-                  <p className="text-[10px] text-gray-400 leading-relaxed mb-2">
+                  <p className="text-[10px] text-slate-300 leading-relaxed mb-2">
                     Enter the items you currently have in excess (surplus) and the items you are low on and urgently need (shortage) to seed your node's database.
                   </p>
 
                   {/* Surplus Stockpile (Excess Amount) */}
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/5 space-y-2">
-                    <span className="text-[9px] font-bold text-blue-400 uppercase tracking-widest block flex items-center gap-1">
+                  <div className="p-3 rounded-xl bg-slate-200/50 border border-slate-200 space-y-2">
+                    <span className="text-[9px] font-bold text-blue-600 uppercase tracking-widest block flex items-center gap-1">
                       🟢 Things in Excess Amount (Surplus Stock)
                     </span>
                     
-                    <div className="relative border-b border-slate-800 py-0.5">
+                    <div className="relative border-b border-slate-200 py-0.5">
                       <input
                         type="text"
                         value={regSurplusName}
                         onChange={(e) => setRegSurplusName(e.target.value)}
                         placeholder="Resource name (e.g. Purified Drinking Water)"
-                        className="w-full bg-transparent text-[11px] text-white placeholder-gray-500 focus:outline-none"
+                        className="w-full bg-transparent text-[11px] text-slate-100 placeholder-slate-300 focus:outline-none"
                       />
                     </div>
 
@@ -755,42 +755,42 @@ export default function LandingPage() {
                       <select
                         value={regSurplusCategory}
                         onChange={(e) => setRegSurplusCategory(e.target.value)}
-                        className="bg-transparent text-[11px] text-white border border-slate-800 rounded px-1.5 py-1 focus:outline-none cursor-pointer"
+                        className="bg-slate-200/50 text-[11px] text-slate-100 border border-slate-200 rounded px-1.5 py-1 focus:outline-none cursor-pointer"
                       >
-                        <option value="Oxygen" className="bg-[#0b1325]">Oxygen</option>
-                        <option value="Food" className="bg-[#0b1325]">Food</option>
-                        <option value="Water" className="bg-[#0b1325]">Water</option>
-                        <option value="Medicine" className="bg-[#0b1325]">Medicine</option>
-                        <option value="Fuel" className="bg-[#0b1325]">Fuel</option>
-                        <option value="Generators" className="bg-[#0b1325]">Generators</option>
-                        <option value="Solar Panels" className="bg-[#0b1325]">Solar Panels</option>
-                        <option value="Medical Equipment" className="bg-[#0b1325]">Equipment</option>
-                        <option value="Batteries" className="bg-[#0b1325]">Batteries</option>
+                        <option value="Oxygen" className="bg-slate-900 text-slate-100">Oxygen</option>
+                        <option value="Food" className="bg-slate-900 text-slate-100">Food</option>
+                        <option value="Water" className="bg-slate-900 text-slate-100">Water</option>
+                        <option value="Medicine" className="bg-slate-900 text-slate-100">Medicine</option>
+                        <option value="Fuel" className="bg-slate-900 text-slate-100">Fuel</option>
+                        <option value="Generators" className="bg-slate-900 text-slate-100">Generators</option>
+                        <option value="Solar Panels" className="bg-slate-900 text-slate-100">Solar Panels</option>
+                        <option value="Medical Equipment" className="bg-slate-900 text-slate-100">Equipment</option>
+                        <option value="Batteries" className="bg-slate-900 text-slate-100">Batteries</option>
                       </select>
                       <input
                         type="number"
                         min="1"
                         value={regSurplusQty}
                         onChange={(e) => setRegSurplusQty(Number(e.target.value))}
-                        className="bg-transparent text-[11px] text-white border border-slate-800 rounded px-1.5 py-1 focus:outline-none text-center"
+                        className="bg-slate-200/50 text-[11px] text-slate-100 border border-slate-200 rounded px-1.5 py-1 focus:outline-none text-center"
                         placeholder="Qty"
                       />
                     </div>
                   </div>
 
                   {/* Deficit Shortage (Needs) */}
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/5 space-y-2">
-                    <span className="text-[9px] font-bold text-orange-400 uppercase tracking-widest block flex items-center gap-1">
+                  <div className="p-3 rounded-xl bg-slate-200/50 border border-slate-200 space-y-2">
+                    <span className="text-[9px] font-bold text-orange-600 uppercase tracking-widest block flex items-center gap-1">
                       🔴 Things Low / Needed (Shortage Deficit)
                     </span>
                     
-                    <div className="relative border-b border-slate-800 py-0.5">
+                    <div className="relative border-b border-slate-200 py-0.5">
                       <input
                         type="text"
                         value={regNeedName}
                         onChange={(e) => setRegNeedName(e.target.value)}
                         placeholder="Required item (e.g. ICU Ventilator)"
-                        className="w-full bg-transparent text-[11px] text-white placeholder-gray-500 focus:outline-none"
+                        className="w-full bg-transparent text-[11px] text-slate-100 placeholder-slate-300 focus:outline-none"
                       />
                     </div>
 
@@ -798,24 +798,24 @@ export default function LandingPage() {
                       <select
                         value={regNeedCategory}
                         onChange={(e) => setRegNeedCategory(e.target.value)}
-                        className="bg-transparent text-[11px] text-white border border-slate-800 rounded px-1.5 py-1 focus:outline-none cursor-pointer"
+                        className="bg-slate-200/50 text-[11px] text-slate-100 border border-slate-200 rounded px-1.5 py-1 focus:outline-none cursor-pointer"
                       >
-                        <option value="Oxygen" className="bg-[#0b1325]">Oxygen</option>
-                        <option value="Food" className="bg-[#0b1325]">Food</option>
-                        <option value="Water" className="bg-[#0b1325]">Water</option>
-                        <option value="Medicine" className="bg-[#0b1325]">Medicine</option>
-                        <option value="Fuel" className="bg-[#0b1325]">Fuel</option>
-                        <option value="Generators" className="bg-[#0b1325]">Generators</option>
-                        <option value="Solar Panels" className="bg-[#0b1325]">Solar Panels</option>
-                        <option value="Medical Equipment" className="bg-[#0b1325]">Equipment</option>
-                        <option value="Batteries" className="bg-[#0b1325]">Batteries</option>
+                        <option value="Oxygen" className="bg-slate-900 text-slate-100">Oxygen</option>
+                        <option value="Food" className="bg-slate-900 text-slate-100">Food</option>
+                        <option value="Water" className="bg-slate-900 text-slate-100">Water</option>
+                        <option value="Medicine" className="bg-slate-900 text-slate-100">Medicine</option>
+                        <option value="Fuel" className="bg-slate-900 text-slate-100">Fuel</option>
+                        <option value="Generators" className="bg-slate-900 text-slate-100">Generators</option>
+                        <option value="Solar Panels" className="bg-slate-900 text-slate-100">Solar Panels</option>
+                        <option value="Medical Equipment" className="bg-slate-900 text-slate-100">Equipment</option>
+                        <option value="Batteries" className="bg-slate-900 text-slate-100">Batteries</option>
                       </select>
                       <input
                         type="number"
                         min="1"
                         value={regNeedQty}
                         onChange={(e) => setRegNeedQty(Number(e.target.value))}
-                        className="bg-transparent text-[11px] text-white border border-slate-800 rounded px-1.5 py-1 focus:outline-none text-center"
+                        className="bg-slate-200/50 text-[11px] text-slate-100 border border-slate-200 rounded px-1.5 py-1 focus:outline-none text-center"
                         placeholder="Qty"
                       />
                     </div>
@@ -826,13 +826,13 @@ export default function LandingPage() {
                     <button
                       type="button"
                       onClick={() => setOnboardingStep(2)}
-                      className="w-1/3 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white font-bold transition text-xs tracking-wider"
+                      className="w-1/3 py-3 rounded-xl bg-slate-200 hover:bg-slate-300/85 border border-slate-200 text-slate-100 font-bold transition text-xs tracking-wider"
                     >
                       Back
                     </button>
                     <button
                       type="submit"
-                      className="w-2/3 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition text-xs tracking-wider"
+                      className="w-2/3 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-slate-900 font-bold transition text-xs tracking-wider"
                     >
                       Complete & Enter
                     </button>
