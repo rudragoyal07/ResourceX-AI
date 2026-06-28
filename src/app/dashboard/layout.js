@@ -100,7 +100,7 @@ export default function DashboardLayout({ children }) {
   const unreadNotifCount = notifications.filter(n => !n.read).length;
 
   return (
-    <div className="min-h-screen bg-[#060913] text-[#f3f4f6] flex flex-col overflow-hidden">
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col overflow-hidden">
       
       {/* Dynamic Background Gradients */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -269,7 +269,7 @@ export default function DashboardLayout({ children }) {
                   href={item.path}
                   className={`mx-3 px-3 py-2.5 rounded-lg text-xs font-semibold tracking-wide flex items-center gap-3 transition-all ${
                     isActive 
-                      ? 'bg-blue-600 hover:bg-blue-500 text-white shadow shadow-blue-600/35 border border-blue-500/20' 
+                      ? 'bg-blue-600 hover:bg-blue-500 text-slate-900 shadow shadow-blue-600/35 border border-blue-500/20' 
                       : 'text-gray-400 hover:text-white hover:bg-slate-900/40'
                   }`}
                 >
