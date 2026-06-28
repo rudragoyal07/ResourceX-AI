@@ -736,7 +736,7 @@ export default function LandingPage() {
                   </p>
 
                   {/* Surplus Stockpile (Excess Amount) */}
-                  <div className="p-3 rounded-xl bg-slate-200/50 border border-slate-200 space-y-2">
+                  <div className="p-3 rounded-xl bg-slate-800/30 border border-slate-800/60 space-y-2">
                     <span className="text-[9px] font-bold text-blue-600 uppercase tracking-widest block flex items-center gap-1">
                       🟢 Things in Excess Amount (Surplus Stock)
                     </span>
@@ -755,7 +755,7 @@ export default function LandingPage() {
                       <select
                         value={regSurplusCategory}
                         onChange={(e) => setRegSurplusCategory(e.target.value)}
-                        className="bg-slate-200/50 text-[11px] text-slate-100 border border-slate-200 rounded px-1.5 py-1 focus:outline-none cursor-pointer"
+                        className="bg-slate-900 text-[11px] text-slate-100 border border-slate-800 rounded px-1.5 py-1 focus:outline-none cursor-pointer"
                       >
                         <option value="Oxygen" className="bg-slate-900 text-slate-100">Oxygen</option>
                         <option value="Food" className="bg-slate-900 text-slate-100">Food</option>
@@ -772,14 +772,14 @@ export default function LandingPage() {
                         min="1"
                         value={regSurplusQty}
                         onChange={(e) => setRegSurplusQty(Number(e.target.value))}
-                        className="bg-slate-200/50 text-[11px] text-slate-100 border border-slate-200 rounded px-1.5 py-1 focus:outline-none text-center"
+                        className="bg-slate-900 text-[11px] text-slate-100 border border-slate-800 rounded px-1.5 py-1 focus:outline-none text-center"
                         placeholder="Qty"
                       />
                     </div>
                   </div>
 
                   {/* Deficit Shortage (Needs) */}
-                  <div className="p-3 rounded-xl bg-slate-200/50 border border-slate-200 space-y-2">
+                  <div className="p-3 rounded-xl bg-slate-800/30 border border-slate-800/60 space-y-2">
                     <span className="text-[9px] font-bold text-orange-600 uppercase tracking-widest block flex items-center gap-1">
                       🔴 Things Low / Needed (Shortage Deficit)
                     </span>
@@ -798,7 +798,7 @@ export default function LandingPage() {
                       <select
                         value={regNeedCategory}
                         onChange={(e) => setRegNeedCategory(e.target.value)}
-                        className="bg-slate-200/50 text-[11px] text-slate-100 border border-slate-200 rounded px-1.5 py-1 focus:outline-none cursor-pointer"
+                        className="bg-slate-900 text-[11px] text-slate-100 border border-slate-800 rounded px-1.5 py-1 focus:outline-none cursor-pointer"
                       >
                         <option value="Oxygen" className="bg-slate-900 text-slate-100">Oxygen</option>
                         <option value="Food" className="bg-slate-900 text-slate-100">Food</option>
@@ -815,7 +815,7 @@ export default function LandingPage() {
                         min="1"
                         value={regNeedQty}
                         onChange={(e) => setRegNeedQty(Number(e.target.value))}
-                        className="bg-slate-200/50 text-[11px] text-slate-100 border border-slate-200 rounded px-1.5 py-1 focus:outline-none text-center"
+                        className="bg-slate-900 text-[11px] text-slate-100 border border-slate-800 rounded px-1.5 py-1 focus:outline-none text-center"
                         placeholder="Qty"
                       />
                     </div>
