@@ -109,7 +109,7 @@ export default function DashboardLayout({ children }) {
       </div>
 
       {/* Top Header */}
-      <header className="relative z-30 h-16 bg-slate-950/60 backdrop-blur-md border-b border-slate-800 px-6 flex items-center justify-between">
+      <header className="relative z-30 h-16 bg-blue-50/80 backdrop-blur-md border-b border-blue-100/50 px-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           {/* Logo and Collapse Toggle */}
           <button 
@@ -132,7 +132,7 @@ export default function DashboardLayout({ children }) {
             </svg>
             <div>
               <h1 className="text-sm font-black tracking-tight hidden sm:inline-block">
-                <span className="text-slate-900">ResourceX</span>{" "}
+                <span className="text-blue-950">ResourceX</span>{" "}
                 <span className="text-blue-600">AI</span>
               </h1>
             </div>

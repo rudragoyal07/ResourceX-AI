@@ -148,7 +148,7 @@ export default function LandingPage() {
 
       {/* Top Navbar */}
       <div className="relative z-10 w-full px-2 md:px-4 mt-6">
-        <header className="w-full px-4 py-4 flex items-center justify-between rounded-2xl glass-panel border border-slate-800/45 shadow-2xl shadow-blue-900/5 backdrop-blur-xl">
+        <header className="w-full px-4 py-4 flex items-center justify-between rounded-2xl bg-blue-50/85 border border-blue-100/50 shadow-xl shadow-blue-500/5 backdrop-blur-xl">
           <div className="flex items-center gap-3">
             <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 shrink-0">
               <path d="M50 8L88 30V74L50 96L12 74V30L50 8Z" stroke="#2563eb" strokeWidth="8" strokeLinejoin="round"/>
@@ -162,7 +162,7 @@ export default function LandingPage() {
             </svg>
             <div>
               <h1 className="text-lg font-black tracking-tight">
-                <span className="text-slate-900">ResourceX</span>{" "}
+                <span className="text-blue-950">ResourceX</span>{" "}
                 <span className="text-blue-600">AI</span>
               </h1>
               <p className="text-[9px] text-gray-500 tracking-widest uppercase font-semibold">Emergency Exchange</p>
