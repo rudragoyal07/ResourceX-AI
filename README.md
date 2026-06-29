@@ -4,9 +4,23 @@
 
 🌐 **Live Deployed App:** [https://resource-x-ai.vercel.app/](https://resource-x-ai.vercel.app/)
 
+---
+
 ## 📄 Project Report
 
 [📥 View Project Report](./ResourceX%20AI%20project%20report.pdf)
+
+---
+
+## 👥 Team
+
+This project was developed collaboratively by:
+
+- [Rudra Goyal](https://github.com/rudragoyal07) – Project Ideation, Solution Architecture, User Flow Design, Frontend Design, UI/UX Design and Deployment & Documentation
+
+- [Harsh Itauriya](https://github.com/harshhh1122) – Full Stack Development, Database & API Integration, AI integration and Frontend Implementation
+
+- [Siddhi Modi](https://github.com/siddhiM-bot) – Problem Research, Domain Research, Requirement Gathering, Market Analysis and Validation of Proposed Solution
 
 ---
 
