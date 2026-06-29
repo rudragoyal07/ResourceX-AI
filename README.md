@@ -92,4 +92,4 @@ The application adopts a **premium sky blue and white card** visual language:
 ---
 
 ## 🏆 Project Recognition
-Built for the **E-Summit Hackathon** as an intelligent logistics coordinator for emergency relief.
+Built for the **E-Cell IIT Roorkee Hackathon** as an intelligent logistics coordinator for emergency relief.
