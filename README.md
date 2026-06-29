@@ -2,7 +2,11 @@
 > **Where Emergency Resources Flow & Grow**  
 > An Intelligent Resource Matchmaking & Logistics Coordination Network designed to optimize disaster relief and emergency supplies routing.
 
-🌐 **Live Deployed App:** [https://resourcex.vercel.app/](https://resourcex.vercel.app/)
+🌐 **Live Deployed App:** [https://resource-x-ai.vercel.app/](https://resource-x-ai.vercel.app/)
+
+## 📄 Project Report
+
+[📥 View Project Report](./ResourceX%20AI%20project%20report.pdf)
 
 ---
 
@@ -45,42 +49,6 @@ The platform is built using modern, fast, and light-weight technologies to ensur
 
 ---
 
-## 📦 Getting Started
-
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed (v18.x or higher recommended).
-
-### Installation
-Clone the repository and install dependencies:
-```bash
-# Clone the repository
-git clone https://github.com/harshhh1122/RESOURCEX.git
-
-# Enter the project directory
-cd RESOURCEX
-
-# Install dependencies
-npm install
-```
-
-### Running Locally
-Launch the local development server:
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
-
-### Building for Production
-Create an optimized production build:
-```bash
-# Build the application
-npm run build
-
-# Start the production server
-npm start
-```
-
----
 
 ## 💎 Design System & Aesthetic Customization
 The application adopts a **premium sky blue and white card** visual language:
